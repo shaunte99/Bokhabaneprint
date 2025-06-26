@@ -3,63 +3,213 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Menu - Bokhabane</title>
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="styles/menu.css" />
+  <title>Bokhabane A4 Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #1E140C;
+      color: white;
+    }
+
+    .nav-logo {
+      width: 100px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .menu-container {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, .tagline {
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 0;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #F28F16;
+      margin-bottom: 30px;
+    }
+
+    .menu-section {
+      margin-bottom: 60px;
+    }
+
+    .menu-section h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #F28F16;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #F28F16;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 0 15px;
+    }
+
+    .menu-card {
+      background-color: #2C1A10;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(242, 143, 22, 0.2);
+      padding: 15px;
+      text-align: center;
+    }
+
+    .menu-card h3 {
+      font-size: 1.1rem;
+      color: #FFD369;
+      margin-bottom: 8px;
+    }
+
+    .menu-card p {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      color: #EAEAEA;
+    }
+
+    .price {
+      background-color: #F28F16;
+      color: #fff;
+      font-weight: bold;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      display: inline-block;
+    }
+
+    .download-btn {
+      display: block;
+      background-color: #F28F16;
+      color: white;
+      font-weight: bold;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 40px auto;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #d6760f;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    @media print {
+      .download-btn {
+        display: none !important;
+      }
+
+      .menu-card {
+        background: none !important;
+        box-shadow: none !important;
+        border: 1px solid #ccc;
+        color: black !important;
+      }
+
+      .price {
+        background: none !important;
+        color: black !important;
+        border: 1px solid black;
+      }
+
+      .menu-section h2 {
+        color: black !important;
+        border-color: black !important;
+      }
+
+      body {
+        background-color: white !important;
+        color: black !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <nav class="navbar fade-in">
-    <img src="images/2a0bd3ec-8de7-40a0-ae1e-585ef01e6304.png" alt="Bokhabane Logo" class="nav-logo">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Internet & Print</a></li>
-    </ul>
-  </nav>
+  <img src="images/2a0bd3ec-8de7-40a0-ae1e-585ef01e6304.png" alt="Bokhabane Logo" class="nav-logo">
 
-  <header class="hero fade-in">
-    <h1>Our Menu</h1>
+  <main id="menu-pdf" class="menu-container">
+    <h1>📜 Bokhabane Menu</h1>
     <p class="tagline">Unleash the flavour!</p>
-  </header>
-
-  <main class="menu-container">
 
     <!-- 🔥 KOTAS -->
-    <section id="kotas" class="menu-section fade-in">
+    <section class="menu-section">
       <h2>🔥 Kotas</h2>
       <div class="menu-grid">
-        <div class="menu-card"><h3>Street Starter</h3><p>Polony + Garlic Polony + Chips + Atchar</p><span class="price">R15</span></div>
-        <div class="menu-card"><h3>Cheesy Starter</h3><p>Street Starter + Cheese</p><span class="price">R18</span></div>
-        <div class="menu-card"><h3>Double Cheese Kota</h3><p>2x Polony + Garlic Polony + Chips + 2 Cheese + Atchar</p><span class="price">R25</span></div>
-        <div class="menu-card"><h3>Vienna Cheese Bite</h3><p>Vienna + Polony + Cheese + Chips + Atchar</p><span class="price">R28</span></div>
-        <div class="menu-card"><h3>Spicy Kota Kick</h3><p>Russian + Vienna + Polony + Chips + Spicy Atchar</p><span class="price">R38</span></div>
-        <div class="menu-card"><h3>Kota Burger Deluxe</h3><p>Burger Patty + Polony + Chips + Cheese + Sauce</p><span class="price">R35</span></div>
-        <div class="menu-card"><h3>Russian Dream</h3><p>Russian + Vienna + Polony + Chips + Cheese</p><span class="price">R35</span></div>
-        <div class="menu-card"><h3>Egg & Everything</h3><p>Egg + Vienna + Polony + Chips + Sauce</p><span class="price">R35</span></div>
-        <div class="menu-card"><h3>Burger Bomb</h3><p>Russian + Burger + Polony + Chips + 2 Cheese + Atchar</p><span class="price">R40</span></div>
-        <div class="menu-card"><h3>Rib Kota Boss</h3><p>Rib Meat + Polony + Chips + Cheese + Atchar</p><span class="price">R50</span></div>
-        <div class="menu-card"><h3>The Special Kota</h3><p>EVERYTHING – Bacon, Egg, Burger, Russians, Cheese</p><span class="price">R50</span></div>
+        <div class="menu-card"><h3>Basic Kota</h3><p>Polony, Chips, Atchar</p><span class="price">R25</span></div>
+        <div class="menu-card"><h3>Cheesy Kota</h3><p>Polony, Chips, Cheese, Atchar</p><span class="price">R28</span></div>
+        <div class="menu-card"><h3>Vienna Kota</h3><p>Polony, Chips, Vienna, Atchar</p><span class="price">R30</span></div>
+        <div class="menu-card"><h3>Cheesy Vienna Kota</h3><p>Polony, Chips, Cheese, Vienna, Atchar</p><span class="price">R33</span></div>
+        <div class="menu-card"><h3>Special Kota</h3><p>Polony, Chips, Cheese, Vienna, Special (Garlic Polony), Atchar</p><span class="price">R38</span></div>
+        <div class="menu-card"><h3>Russian Delight</h3><p>Polony, Chips, Cheese, Vienna, Russian, Atchar</p><span class="price">R40</span></div>
+        <div class="menu-card"><h3>Full Breakfast Kota</h3><p>Polony, Chips, Cheese, Vienna, Russian, Egg, Atchar</p><span class="price">R43</span></div>
+        <div class="menu-card"><h3>Meaty Madness</h3><p>Polony, Chips, Cheese, Vienna, Special, Russian, Atchar</p><span class="price">R45</span></div>
+        <div class="menu-card"><h3>Burger Kota</h3><p>Polony, Chips, Cheese, Vienna, Special, Russian, Burger Patty, Atchar</p><span class="price">R50</span></div>
+        <div class="menu-card"><h3>Full House Kota</h3><p>Polony, Chips, Cheese, Vienna, Special, Russian, Burger Patty, Egg, Atchar</p><span class="price">R55</span></div>
       </div>
     </section>
 
-    <!-- 🌭 HOTDOGS & SAUSAGE ROLLS -->
-    <section id="rolls" class="menu-section fade-in">
-      <h2>🌭 Hotdogs & Sausage Rolls</h2>
+    <!-- 🌭 ROLLS -->
+    <section class="menu-section">
+      <h2>🌭 Rolls</h2>
       <div class="menu-grid">
-        <div class="menu-card"><h3>Small Sausage Roll</h3><p>Flaky pastry with sausage</p><span class="price">R15</span></div>
-        <div class="menu-card"><h3>Vienna (Per Piece)</h3><p>Simple Vienna sausage</p><span class="price">R12</span></div>
-        <div class="menu-card"><h3>Russian (Per Piece)</h3><p>Juicy single Russian</p><span class="price">R15</span></div>
-        <div class="menu-card"><h3>Medium Sausage Roll</h3><p>Snack-sized</p><span class="price">R20</span></div>
-        <div class="menu-card"><h3>Basic Hotdog</h3><p>Vienna + Roll + Sauce</p><span class="price">R20</span></div>
-        <div class="menu-card"><h3>Large Sausage Roll</h3><p>Hearty meal</p><span class="price">R30</span></div>
-        <div class="menu-card"><h3>Cheese Hotdog</h3><p>Vienna + Cheese + Sauce</p><span class="price">R25</span></div>
-        <div class="menu-card"><h3>Loaded Hotdog</h3><p>Vienna + Cheese + Atchar + Sauce</p><span class="price">R30</span></div>
+        <div class="menu-card"><h3>Hot Dog Roll</h3><p>Vienna in a soft roll with sauce</p><span class="price">R15</span></div>
+        <div class="menu-card"><h3>Chip Roll</h3><p>Soft roll filled with slap chips</p><span class="price">R18</span></div>
+        <div class="menu-card"><h3>Boerie Wors Roll</h3><p>Boerewors in a roll with sauce</p><span class="price">R25</span></div>
       </div>
     </section>
 
-    <!-- 🥩 COMBO & BRAAI -->
-    <section id="combos" class="menu-section fade-in">
+    <!-- ➕ ADD-ONS -->
+    <section class="menu-section">
+      <h2>➕ Add-Ons</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><h3>Polony</h3><span class="price">R3</span></div>
+        <div class="menu-card"><h3>Egg</h3><span class="price">R5</span></div>
+        <div class="menu-card"><h3>Vienna</h3><span class="price">R5</span></div>
+        <div class="menu-card"><h3>Cheese</h3><span class="price">R5</span></div>
+        <div class="menu-card"><h3>Special (Garlic Polony)</h3><span class="price">R7</span></div>
+        <div class="menu-card"><h3>Russian</h3><span class="price">R10</span></div>
+        <div class="menu-card"><h3>Burger Patty</h3><span class="price">R10</span></div>
+      </div>
+    </section>
+
+    <!-- 🍟 CHIPS -->
+    <section class="menu-section">
+      <h2>🍟 Chips Sizes</h2>
+      <div class="menu-grid">
+        <div class="menu-card"><h3>Small</h3><span class="price">R10</span></div>
+        <div class="menu-card"><h3>Medium</h3><span class="price">R15</span></div>
+        <div class="menu-card"><h3>Large</h3><span class="price">R20</span></div>
+        <div class="menu-card"><h3>Family Size</h3><span class="price">R30</span></div>
+      </div>
+    </section>
+
+    <!-- 🥩 COMBOS -->
+    <section class="menu-section">
       <h2>🥩 Combos & Braai Packs</h2>
       <div class="menu-grid">
         <div class="menu-card"><h3>Boerewors Roll + Chips + Drink</h3><span class="price">R60</span></div>
@@ -73,7 +223,7 @@
     </section>
 
     <!-- ☕ DRINKS -->
-    <section id="drinks" class="menu-section fade-in">
+    <section class="menu-section">
       <h2>☕ Tea & Coffee</h2>
       <div class="menu-grid">
         <div class="menu-card"><h3>Tea – Small</h3><span class="price">R8</span></div>
@@ -84,14 +234,29 @@
         <div class="menu-card"><h3>Coffee – Large</h3><span class="price">R20</span></div>
       </div>
     </section>
-
-   
   </main>
 
-  <footer class="fade-in">
+  <button class="download-btn" onclick="downloadPDF()">📥 Download PDF</button>
+
+  <footer>
     <p>&copy; 2025 Bokhabane Kota & Fast Food. Flavor Lives Here.</p>
   </footer>
 
-  <script src="scripts/script.js"></script>
+  <!-- PDF SCRIPT -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    function downloadPDF() {
+      const element = document.getElementById('menu-pdf');
+      const options = {
+        filename: 'Bokhabane_Menu.pdf',
+        margin: 0.3,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().from(element).set(options).save();
+    }
+  </script>
 </body>
 </html>
+
