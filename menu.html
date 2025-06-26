@@ -24,6 +24,7 @@
       padding: 40px 20px;
       max-width: 900px;
       margin: auto;
+      background-color: #1E140C;
     }
 
     h1, .tagline {
@@ -44,6 +45,8 @@
 
     .menu-section {
       margin-bottom: 60px;
+      page-break-inside: avoid;
+      break-inside: avoid;
     }
 
     .menu-section h2 {
@@ -70,6 +73,7 @@
       box-shadow: 0 0 12px rgba(242, 143, 22, 0.2);
       padding: 15px;
       text-align: center;
+      color: white;
     }
 
     .menu-card h3 {
@@ -157,7 +161,7 @@
     <h1>📜 Bokhabane Menu</h1>
     <p class="tagline">Unleash the flavour!</p>
 
-    <!-- 🔥 KOTAS -->
+    <!-- KOTAS -->
     <section class="menu-section">
       <h2>🔥 Kotas</h2>
       <div class="menu-grid">
@@ -174,7 +178,7 @@
       </div>
     </section>
 
-    <!-- 🌭 ROLLS -->
+    <!-- ROLLS -->
     <section class="menu-section">
       <h2>🌭 Rolls</h2>
       <div class="menu-grid">
@@ -184,7 +188,7 @@
       </div>
     </section>
 
-    <!-- ➕ ADD-ONS -->
+    <!-- ADD-ONS -->
     <section class="menu-section">
       <h2>➕ Add-Ons</h2>
       <div class="menu-grid">
@@ -198,7 +202,7 @@
       </div>
     </section>
 
-    <!-- 🍟 CHIPS -->
+    <!-- CHIPS -->
     <section class="menu-section">
       <h2>🍟 Chips Sizes</h2>
       <div class="menu-grid">
@@ -209,7 +213,7 @@
       </div>
     </section>
 
-    <!-- 🥩 COMBO & BRAAI -->
+    <!-- COMBOS -->
     <section class="menu-section">
       <h2>🥩 Combos & Braai Packs</h2>
       <div class="menu-grid">
@@ -223,7 +227,7 @@
       </div>
     </section>
 
-    <!-- ☕ DRINKS -->
+    <!-- DRINKS -->
     <section class="menu-section">
       <h2>☕ Tea & Coffee</h2>
       <div class="menu-grid">
@@ -237,7 +241,7 @@
     </section>
   </main>
 
-  <button class="download-btn" onclick="downloadPDF()">📥 Download PDF</button>
+  <button class="download-btn" onclick="downloadPDF()">📥 Download Full Menu PDF</button>
 
   <footer>
     <p>&copy; 2025 Bokhabane Kota & Fast Food. Flavor Lives Here.</p>
@@ -246,14 +250,15 @@
   <script>
     function downloadPDF() {
       const element = document.getElementById('menu-pdf');
-      const options = {
-        filename: 'Bokhabane_Menu.pdf',
-        margin: 0.3,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      const opt = {
+        margin:       0.5,
+        filename:     'Bokhabane_Menu.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' },
+        pagebreak:    { mode: ['css', 'legacy'], before: '.menu-section' }
       };
-      html2pdf().from(element).set(options).save();
+      html2pdf().set(opt).from(element).save();
     }
   </script>
 </body>
