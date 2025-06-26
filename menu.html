@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bokhabane A4 Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
     body {
       margin: 0;
@@ -14,9 +15,9 @@
     }
 
     .nav-logo {
-      width: 100px;
+      width: 120px;
       display: block;
-      margin: 20px auto;
+      margin: 30px auto 10px;
     }
 
     .menu-container {
@@ -208,7 +209,7 @@
       </div>
     </section>
 
-    <!-- 🥩 COMBOS -->
+    <!-- 🥩 COMBO & BRAAI -->
     <section class="menu-section">
       <h2>🥩 Combos & Braai Packs</h2>
       <div class="menu-grid">
@@ -242,8 +243,6 @@
     <p>&copy; 2025 Bokhabane Kota & Fast Food. Flavor Lives Here.</p>
   </footer>
 
-  <!-- PDF SCRIPT -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     function downloadPDF() {
       const element = document.getElementById('menu-pdf');
