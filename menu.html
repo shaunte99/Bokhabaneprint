@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bokhabane A4 Menu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
     body {
@@ -13,42 +13,35 @@
       background-color: #1E140C;
       color: white;
     }
-
     .nav-logo {
       width: 120px;
       display: block;
       margin: 30px auto 10px;
     }
-
     .menu-container {
       padding: 40px 20px;
       max-width: 900px;
       margin: auto;
       background-color: #1E140C;
     }
-
     h1, .tagline {
       text-align: center;
     }
-
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
       margin-bottom: 0;
     }
-
     .tagline {
       font-size: 1.2rem;
       color: #F28F16;
       margin-bottom: 30px;
     }
-
     .menu-section {
       margin-bottom: 60px;
       page-break-inside: avoid;
       break-inside: avoid;
     }
-
     .menu-section h2 {
       text-align: center;
       font-family: 'Playfair Display', serif;
@@ -59,14 +52,12 @@
       display: inline-block;
       padding-bottom: 5px;
     }
-
     .menu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
       padding: 0 15px;
     }
-
     .menu-card {
       background-color: #2C1A10;
       border-radius: 12px;
@@ -75,19 +66,16 @@
       text-align: center;
       color: white;
     }
-
     .menu-card h3 {
       font-size: 1.1rem;
       color: #FFD369;
       margin-bottom: 8px;
     }
-
     .menu-card p {
       font-size: 0.95rem;
       margin-bottom: 10px;
       color: #EAEAEA;
     }
-
     .price {
       background-color: #F28F16;
       color: #fff;
@@ -97,7 +85,6 @@
       font-size: 0.9rem;
       display: inline-block;
     }
-
     .download-btn {
       display: block;
       background-color: #F28F16;
@@ -108,44 +95,37 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      margin: 40px auto;
+      margin: 40px auto 20px;
       transition: background 0.3s ease;
     }
-
     .download-btn:hover {
       background-color: #d6760f;
     }
-
     footer {
       text-align: center;
       font-size: 0.9rem;
       margin-top: 30px;
       padding-bottom: 30px;
     }
-
     @media print {
       .download-btn {
         display: none !important;
       }
-
       .menu-card {
         background: none !important;
         box-shadow: none !important;
         border: 1px solid #ccc;
         color: black !important;
       }
-
       .price {
         background: none !important;
         color: black !important;
         border: 1px solid black;
       }
-
       .menu-section h2 {
         color: black !important;
         border-color: black !important;
       }
-
       body {
         background-color: white !important;
         color: black !important;
@@ -154,15 +134,13 @@
   </style>
 </head>
 <body>
-
-  <img src="images/2a0bd3ec-8de7-40a0-ae1e-585ef01e6304.png" alt="Bokhabane Logo" class="nav-logo">
-
+  <img src="images/2a0bd3ec-8de7-40a0-ae1e-585ef01e6304.png" alt="Bokhabane Logo" class="nav-logo" />
   <main id="menu-pdf" class="menu-container">
     <h1>📜 Bokhabane Menu</h1>
     <p class="tagline">Unleash the flavour!</p>
 
-    <!-- KOTAS -->
-    <section class="menu-section">
+    <!-- 🔥 KOTAS -->
+    <section id="kotas" class="menu-section">
       <h2>🔥 Kotas</h2>
       <div class="menu-grid">
         <div class="menu-card"><h3>Basic Kota</h3><p>Polony, Chips, Atchar</p><span class="price">R25</span></div>
@@ -178,8 +156,8 @@
       </div>
     </section>
 
-    <!-- ROLLS -->
-    <section class="menu-section">
+    <!-- 🌭 ROLLS -->
+    <section id="rolls" class="menu-section">
       <h2>🌭 Rolls</h2>
       <div class="menu-grid">
         <div class="menu-card"><h3>Hot Dog Roll</h3><p>Vienna in a soft roll with sauce</p><span class="price">R15</span></div>
@@ -188,8 +166,8 @@
       </div>
     </section>
 
-    <!-- ADD-ONS -->
-    <section class="menu-section">
+    <!-- ➕ ADD-ONS -->
+    <section id="addons" class="menu-section">
       <h2>➕ Add-Ons</h2>
       <div class="menu-grid">
         <div class="menu-card"><h3>Polony</h3><span class="price">R3</span></div>
@@ -202,8 +180,8 @@
       </div>
     </section>
 
-    <!-- CHIPS -->
-    <section class="menu-section">
+    <!-- 🍟 CHIPS -->
+    <section id="chips" class="menu-section">
       <h2>🍟 Chips Sizes</h2>
       <div class="menu-grid">
         <div class="menu-card"><h3>Small</h3><span class="price">R10</span></div>
@@ -213,8 +191,8 @@
       </div>
     </section>
 
-    <!-- COMBOS -->
-    <section class="menu-section">
+    <!-- 🥩 COMBO & BRAAI -->
+    <section id="combos" class="menu-section">
       <h2>🥩 Combos & Braai Packs</h2>
       <div class="menu-grid">
         <div class="menu-card"><h3>Boerewors Roll + Chips + Drink</h3><span class="price">R60</span></div>
@@ -227,8 +205,8 @@
       </div>
     </section>
 
-    <!-- DRINKS -->
-    <section class="menu-section">
+    <!-- ☕ DRINKS -->
+    <section id="drinks" class="menu-section">
       <h2>☕ Tea & Coffee</h2>
       <div class="menu-grid">
         <div class="menu-card"><h3>Tea – Small</h3><span class="price">R8</span></div>
@@ -241,7 +219,7 @@
     </section>
   </main>
 
-  <button class="download-btn" onclick="downloadPDF()">📥 Download Full Menu PDF</button>
+  <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
 
   <footer>
     <p>&copy; 2025 Bokhabane Kota & Fast Food. Flavor Lives Here.</p>
@@ -254,13 +232,11 @@
         margin:       0.5,
         filename:     'Bokhabane_Menu.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true },
-        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' },
-        pagebreak:    { mode: ['css', 'legacy'], before: '.menu-section' }
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
       };
       html2pdf().set(opt).from(element).save();
     }
   </script>
 </body>
 </html>
-
