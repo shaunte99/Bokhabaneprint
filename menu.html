@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bokhabane Menu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Printable Menu - Bokhabane</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: 'Open Sans', sans-serif;
-      background: white;
-      color: black;
+      font-family: 'Arial', sans-serif;
+      color: #000;
+      background: #fff;
       padding: 40px;
       max-width: 800px;
       margin: auto;
     }
+
     h1, h2 {
       color: #F28F16;
       border-bottom: 2px solid #F28F16;
-      padding-bottom: 5px;
+      padding-bottom: 4px;
       margin-top: 40px;
     }
+
     .menu-card {
-      padding: 10px 0;
-      border-bottom: 1px dashed #ccc;
       display: flex;
       justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dotted #ccc;
     }
+
     .menu-card h3, .menu-card span {
       margin: 0;
       font-size: 1rem;
     }
-    .download-btn {
+
+    button.print-btn {
       display: block;
+      margin: 30px auto;
       background: #F28F16;
-      color: white;
+      color: #fff;
+      padding: 12px 25px;
       border: none;
-      padding: 12px 20px;
       border-radius: 5px;
       font-size: 1rem;
       cursor: pointer;
-      margin: 40px auto;
-      text-align: center;
     }
+
     footer {
       margin-top: 40px;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #777;
+    }
+
+    /* 🔥 PRINT MODE STYLES */
+    @media print {
+      button.print-btn {
+        display: none;
+      }
     }
   </style>
 </head>
-<body id="menu-page">
+<body>
 
-  <h1>Bokhabane Menu</h1>
+  <h1>Bokhabane Full Menu</h1>
 
   <section>
     <h2>🔥 Kotas</h2>
@@ -115,27 +125,12 @@
     <div class="menu-card"><h3>Coffee – Large</h3><span>R20</span></div>
   </section>
 
-  <button class="download-btn" onclick="downloadPDF()">📥 Download PDF</button>
+  <button class="print-btn" onclick="window.print()">🖨 Print / Save as PDF</button>
 
   <footer>
-    &copy; 2025 Bokhabane Kota & Fast Food. Flavor Lives Here.
+    &copy; 2025 Bokhabane Kota & Fast Food
   </footer>
 
-  <!-- JS to Download PDF -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script>
-    function downloadPDF() {
-      const element = document.body;
-      const opt = {
-        margin: 0.5,
-        filename: 'bokhabane-menu.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
-      };
-      html2pdf().set(opt).from(element).save();
-    }
-  </script>
 </body>
 </html>
 
