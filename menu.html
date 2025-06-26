@@ -68,26 +68,42 @@
       color: #aaa;
     }
 
+    .print-btn {
+      display: block;
+      background-color: #F28F16;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 0 auto 40px;
+      font-size: 1rem;
+    }
+
+    .print-btn:hover {
+      background-color: #d8760b;
+    }
+
     @media print {
+      .print-btn {
+        display: none;
+      }
       body {
         padding: 10mm;
         color-adjust: exact;
-      }
-      h1, h2 {
-        page-break-after: avoid;
-      }
-      table {
-        page-break-inside: avoid;
       }
     }
   </style>
 </head>
 <body>
 
+  <button class="print-btn" onclick="window.print()">🖨️ Download Menu as PDF</button>
+
   <h1>Our Menu</h1>
   <p class="tagline">Unleash the flavour!</p>
 
-  <!-- KOTAS -->
+  <!-- 🔥 KOTAS -->
   <h2>🔥 Kotas</h2>
   <table>
     <tr><td>Basic Kota</td><td>Polony, Chips, Atchar</td><td>R25</td></tr>
@@ -102,7 +118,7 @@
     <tr><td>Full House Kota</td><td>Polony, Chips, Cheese, Vienna, Special, Russian, Burger Patty, Egg, Atchar</td><td>R55</td></tr>
   </table>
 
-  <!-- ROLLS -->
+  <!-- 🌭 ROLLS -->
   <h2>🌭 Rolls</h2>
   <table>
     <tr><td>Hot Dog Roll</td><td>Vienna in a soft roll with sauce</td><td>R15</td></tr>
@@ -110,7 +126,7 @@
     <tr><td>Boerie Wors Roll</td><td>Boerewors in a roll with sauce</td><td>R25</td></tr>
   </table>
 
-  <!-- ADD-ONS -->
+  <!-- ➕ ADD-ONS -->
   <h2>➕ Add-Ons</h2>
   <table>
     <tr><td>Polony</td><td></td><td>R3</td></tr>
@@ -122,7 +138,7 @@
     <tr><td>Burger Patty</td><td></td><td>R10</td></tr>
   </table>
 
-  <!-- CHIPS -->
+  <!-- 🍟 CHIPS -->
   <h2>🍟 Chips Sizes</h2>
   <table>
     <tr><td>Small</td><td></td><td>R10</td></tr>
@@ -131,7 +147,7 @@
     <tr><td>Family Size</td><td></td><td>R30</td></tr>
   </table>
 
-  <!-- COMBOS -->
+  <!-- 🥩 COMBOS -->
   <h2>🥩 Combos & Braai Packs</h2>
   <table>
     <tr><td>Boerewors Roll + Chips + Drink</td><td></td><td>R60</td></tr>
@@ -143,7 +159,7 @@
     <tr><td>Lamb Chops (250g)</td><td></td><td>R80</td></tr>
   </table>
 
-  <!-- DRINKS -->
+  <!-- ☕ DRINKS -->
   <h2>☕ Tea & Coffee</h2>
   <table>
     <tr><td>Tea – Small</td><td></td><td>R8</td></tr>
