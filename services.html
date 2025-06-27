@@ -2,60 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Internet & Printing - Bokhabane</title>
-  <link rel="stylesheet" href="styles/services.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Bokhabane Internet & Print</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #1E140C;
+      color: #fff;
+      padding: 40px;
+      margin: 0;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #F28F16;
+      margin-bottom: 10px;
+    }
+
+    p.tagline {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #FFD369;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #F28F16;
+      border-bottom: 2px solid #F28F16;
+      display: inline-block;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+
+    td {
+      padding: 10px;
+      vertical-align: top;
+      border-bottom: 1px solid #444;
+    }
+
+    td:first-child {
+      font-weight: bold;
+      color: #FFD369;
+      width: 50%;
+    }
+
+    td:last-child {
+      color: #F28F16;
+      text-align: right;
+      width: 20%;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 40px;
+      color: #aaa;
+    }
+
+    .print-btn {
+      display: block;
+      background-color: #F28F16;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 0 auto 40px;
+      font-size: 1rem;
+    }
+
+    .print-btn:hover {
+      background-color: #d8760b;
+    }
+
+    @media print {
+      .print-btn {
+        display: none;
+      }
+      body {
+        padding: 10mm;
+        color-adjust: exact;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <nav class="navbar fade-in">
-    <img src="images/logo.png" alt="Bokhabane Logo" class="nav-logo">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-    </ul>
-  </nav>
+  <img src="images/logo.png" alt="Bokhabane Logo" class="logo" />
 
-  <header class="hero fade-in">
-    <h1>📄 Bokhabane Internet & Print Services</h1>
-    <p class="tagline">Fast. Reliable. Affordable.</p>
-  </header>
+  <button class="print-btn" onclick="window.print()">🖨️ Download Services as PDF</button>
 
-  <main class="services-container fade-in">
-    <section class="service-section">
-      <h2>🖨 Printing</h2>
-      <ul>
-        <li><strong>Black & White A4:</strong> R3 per page</li>
-        <li><strong>Colour A4 (1–10 pages):</strong> R6 per page</li>
-        <li><strong>Colour A4 (11–50 pages):</strong> R5 per page</li>
-      </ul>
-    </section>
+  <h1>📄 Bokhabane Internet & Print Services</h1>
+  <p class="tagline">Fast. Reliable. Affordable.</p>
 
-    <section class="service-section">
-      <h2>📄 Copying</h2>
-      <ul>
-        <li><strong>B&W Copy (A4):</strong> R3 per page</li>
-        <li><strong>Colour Copy (A4):</strong> R5 per page</li>
-      </ul>
-    </section>
+  <!-- 🖨 Printing -->
+  <h2>🖨 Printing</h2>
+  <table>
+    <tr><td>Black & White A4</td><td>R3 per page</td></tr>
+    <tr><td>Colour A4 (1–10 pages)</td><td>R6 per page</td></tr>
+    <tr><td>Colour A4 (11–50 pages)</td><td>R5 per page</td></tr>
+  </table>
 
-    <section class="service-section">
-      <h2>🌐 Internet Usage</h2>
-      <ul>
-        <li><strong>15 minutes:</strong> R12</li>
-        <li><strong>30 minutes:</strong> R20</li>
-        <li><strong>1 hour:</strong> R35</li>
-        <li><strong>2 hours:</strong> R60</li>
-      </ul>
-    </section>
-  </main>
+  <!-- 📄 Copying -->
+  <h2>📄 Copying</h2>
+  <table>
+    <tr><td>B&W Copy (A4)</td><td>R3 per page</td></tr>
+    <tr><td>Colour Copy (A4)</td><td>R5 per page</td></tr>
+  </table>
 
-  <footer class="fade-in">
-    <p>&copy; 2025 Bokhabane Internet & Print. Powered by Bokhabane Fast Food.</p>
-  </footer>
+  <!-- 🌐 Internet Usage -->
+  <h2>🌐 Internet Usage</h2>
+  <table>
+    <tr><td>15 minutes</td><td>R12</td></tr>
+    <tr><td>30 minutes</td><td>R20</td></tr>
+    <tr><td>1 hour</td><td>R35</td></tr>
+    <tr><td>2 hours</td><td>R60</td></tr>
+  </table>
 
-  <script src="scripts/services.js"></script>
+  <div class="footer">
+    &copy; 2025 Bokhabane Internet & Print. Powered by Bokhabane Fast Food.
+  </div>
+
 </body>
 </html>
